@@ -1,0 +1,482 @@
+/*******  Les styles de base *******/
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* les styles de body */
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: #fff;
+}
+img {
+  width: 100%;
+}
+p {
+  font-family: "Lato", sans-serif;
+}
+li {
+  list-style: none;
+}
+
+/*******  CLASSES A UTILISEES *******/
+.container {
+  max-width: 960px;
+  margin: auto;
+}
+
+/*******  CLASSES COMMUNES (utilisé dans plusieur element) *******/
+.first_title_edited {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.first_title_edited h2 {
+  margin: 0 20px;
+}
+.first_title_edited div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.first_title_edited span {
+  background-color: #ddd8d4;
+  margin: 1.3px 0;
+  width: 90px;
+  height: 1.3px;
+}
+/* les lines au dessous des titres de footer, de bienvenue section et de carte titres  */
+.bienvenue_sub_title::before,
+.footer_info_title::before,
+.card_title::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #c5c5c5;
+  left: 0;
+  top: 44px;
+}
+.bienvenue_sub_title::after,
+.footer_info_title::after,
+.card_title::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #c5c5c5;
+  left: 0;
+  top: 47px;
+}
+/* modifier le couleur des lines qui sont au dessous des titres des cartes et du footer */
+.footer_info_title::before,
+.footer_info_title::after,
+.card_title::before,
+.card_title::after {
+  background-color: #867770;
+}
+/* slider buttons (home carousel buttons et galerie slider buttons) */
+.carousel button,
+.galerie_slider button {
+  background: border-box;
+  outline: none;
+  border: none;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/*******  Header styles *******/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(0 0 0 / 50%);
+  padding: 10px 0;
+  z-index: 1000;
+}
+/* line dessous le header */
+.header::after {
+  content: "";
+  position: fixed;
+  left: 0;
+  margin-top: 11px;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(0 0 0 / 50%);
+}
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  max-width: 720px;
+  margin: auto;
+}
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* styliser suites list items */
+.suites_link_list {
+  position: relative;
+}
+.suites_ul_list {
+  position: absolute;
+  top: 8px;
+  display: none;
+  padding: 20px 0px;
+}
+.suites_list_item {
+  background-color: rgb(255 113 1 / 88%);
+  margin-bottom: 2px;
+  color: #fff;
+  cursor: pointer;
+}
+.suites_list_item a {
+  display: block;
+  padding: 8px 5px;
+  font-size: 11px;
+}
+/* afficher la liste lorsque hover sur le lien suites  */
+.suites_link_list:hover .suites_ul_list {
+  display: block;
+}
+
+/******* TOP SLIDER *******/
+.carousel {
+  position: relative;
+}
+.carousel_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.carousel .controls_prev {
+  left: 20%;
+}
+.carousel .controls_next {
+  right: 20%;
+}
+
+/*******  BIENVENUE SECTION *******/
+.bienvenue {
+  background-image: url("./images/bg-content.jpg");
+  background-repeat: repeat;
+  background-size: auto;
+  background-position: center;
+  text-align: center;
+  padding: 30px 0;
+}
+.first_title {
+  color: #7a5a45;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.bienvenue_sub_title {
+  position: relative;
+  color: #ff7101;
+  font-family: "Dancing Script", cursive;
+  margin-bottom: 40px;
+  font-size: 30px;
+}
+/* les lines au dessous du sous titre */
+.bienvenue_sub_title::before {
+  top: 56px;
+}
+.bienvenue_sub_title::after {
+  top: 60px;
+}
+.bienvenue_parag {
+  color: #3d3834;
+  line-height: 2;
+  margin-bottom: 20px;
+}
+.avoir_plus_title {
+  color: #ff7101;
+  text-transform: uppercase;
+}
+.bienvenue_plus_cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.card {
+  width: 32%;
+  padding: 20px;
+  border-bottom: 8px solid rgb(100 90 84 / 60%);
+}
+.card:nth-of-type(odd) {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#f0e1c0),
+    to(rgb(240 225 192 / 60%))
+  );
+  background: linear-gradient(to bottom, #f0e1c0, rgb(240 225 192 / 60%));
+  color: #7a5a45;
+}
+.card:nth-of-type(even) {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#5d524c),
+    to(rgb(93 82 76 / 60%))
+  );
+  background: linear-gradient(to bottom, #5d524c, rgb(93 82 76 / 60%));
+  color: #f0e1c0;
+}
+.card .card_title {
+  position: relative;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+/* styliser les paragraphes de chaque carte */
+.card p {
+  font-size: 14px;
+  color: #3d3834;
+  word-spacing: 3px;
+  margin: 16px 0px;
+}
+.card:nth-of-type(2) p {
+  color: #fff;
+}
+.avoir_plus_btn {
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 3px solid;
+  padding-bottom: 4px;
+  cursor: pointer;
+}
+
+/*******  GALERIE SECTION *******/
+.galerie {
+  background-image: url("./images/bg-galerie.jpg");
+  background-repeat: repeat;
+  background-size: auto;
+  text-align: center;
+  background-position: center;
+  padding: 24px 0;
+}
+.galerie_slider {
+  position: relative;
+}
+.galerie_carousel {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+.galerie_carousel_item {
+  position: relative;
+  background-color: #fff;
+  padding: 5px;
+  width: 24%;
+  border: 1px solid #eee;
+}
+/* cacher l'image est l'afficher lorsque hover sur galerie elements*/
+.hover_img {
+  display: none;
+}
+.galerie_carousel_item:hover .hover_img {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 70%;
+  background-color: rgb(0 0 0 / 60%);
+  padding: 40px 50px;
+}
+.galerie_controls_prev {
+  left: 0;
+}
+.galerie_controls_next {
+  right: 0;
+}
+
+/*******  FOOTER *******/
+.footer {
+  background-image: url("./images/motif-footer.jpg");
+  background-repeat: repeat;
+  background-size: auto;
+  background-position: center;
+}
+/* donner des propriétés de flexbox pour aligner les 2 div qui contient les elements de footer, l'un a coté de l'autre  */
+.footer_sec {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  color: #90887d;
+  padding: 10px 0 20px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+/* largeur de 1er div 30% et le 2éme 68%, 2% l'espace entre ce deux div */
+.footer_sec .footer_info:first-of-type {
+  width: 30%;
+}
+.footer_sec .footer_info:last-of-type {
+  width: 68%;
+}
+/* styliser les titres de footer (NEWSLETTER et CONTACTEZ-NOUS) */
+.footer_info_title {
+  position: relative;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  color: #a29783;
+}
+.newsletter_parag {
+  margin-bottom: 16px;
+}
+/* styliser la formulaire d'inscription */
+.inscription_form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: #ff7101;
+}
+/* styliser le champ de la formulaire */
+.inscrip_input {
+  padding: 7px;
+  border: none;
+  outline: none;
+  width: 70%;
+}
+/* styliser le boutton de la formulaire */
+.inscrip_btn {
+  background-color: #ff9800;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0px 10px;
+  color: #fff;
+  width: 29%;
+  font-size: 12px;
+}
+/* contact_info = le div qui contient le 3 parties de Contactez-Nous section 
+  (utilisant les propriétés de flexbox pour le diviser en 3 sections egal, et aligner l'un à coté de l'autre)
+*/
+.contact_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+/* aligné les element de div .contact_adress_container  sur la ligne de base de l'axe transversal */
+.contact_info_sec .contact_adress_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+.contact_info_sec,
+.contact_info_sec .contact_adress_container .contact_adress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.contact_info_sec .info_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+/* modifier les couleurs des liens dans le footer */
+.contact_info_sec a {
+  color: #ff7101;
+}
+/* styliser les images icons du footer */
+.footer img {
+  padding-right: 10px;
+  width: 25px;
+}
+/* styliser le div qui contient les icons de social media */
+.contact_social_links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  font-size: 30px;
+}
+.contact_social_links a:nth-of-type(2) {
+  margin-left: 6px;
+  margin-right: 6px;
+}
+/* styliser les icons de social media */
+.contact_social_links i {
+  color: #484342;
+  padding-right: 0;
+}
+/* styliser la partie bas du footer */
+.footer_bottom {
+  padding: 24px;
+  background-color: #574d4b;
+}
